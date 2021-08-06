@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+*, *:after, *:before{
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background-color: #B0B2B8;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.piano{
+  padding: 0 10px 0 10px;
+  background-color: #363C4A;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 920px;
+}
+.piano__info{
+  width: 100%;
+  display: flex;
+}
+.piano__user-container{
+  min-width: 100px;
+  background-color: #2D562D;
+  padding: 5px;
+  margin: 10px 0;
+}
+.piano__current-user{
+  color: #81B73E;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+.key{
+  width: 60px;
+  cursor: pointer;
+  transition: all .3s;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.white{
+  height: 220px;
+  background-color: white;
+  border: 5px solid #363C4A;
+  border-bottom: 5px solid #DFD3D3;
+  z-index: 1;
+}
+.white:active{
+  border-bottom: none;
+  background-color: #DFD3D3;
+}
+.black{
+  width: 30px;
+  height: 130px;
+  background-color: #363C4A;
+  z-index: 2;
+  margin-left: -15px;
+  margin-right: -15px;
+  border-bottom: 5px solid #5D5E67;
+}
+.black:active{
+  border-bottom: none;
+}
+.pressed{
+  border-bottom: none;
+  background-color: #f09071;
 }
